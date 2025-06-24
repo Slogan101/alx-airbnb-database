@@ -11,8 +11,7 @@ CREATE TABLE users (
 
 
 CREATE TABLE property (
-    booking_id UUID PRIMARY KEY,
-    property_id UUID NOT NULL,
+    property_id UUID PRIMARY KEY,
     host_id UUID NOT NULL,
     name VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
@@ -21,9 +20,9 @@ CREATE TABLE property (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
-    FOREIGN KEY (property_id) REFERENCES users(user_id),
     FOREIGN KEY (host_id) REFERENCES users(user_id)
 );
+
 
 
 
