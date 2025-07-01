@@ -1,7 +1,7 @@
 -- performance.sql
 
 
--- performance.sql
+EXPLAIN
 
 SELECT
     b.booking_id,
